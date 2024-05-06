@@ -1,2 +1,2 @@
-# Web-Design
-Web upload trial using GitHub 
+# Chévre
+Welcome to a trial website for Chévre.
