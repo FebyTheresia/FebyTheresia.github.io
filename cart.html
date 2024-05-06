@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chevre</title>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <nav class="navbar">
+            <div class="content">
+                <div>
+                    <img class="logo" src="Images/chevre transparent.png">
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li><a href="index.html" class="hover">Home</a></li>
+                    <li><a href="menu.html" class="hover">Menu</a></li>
+                    <li><a href="location.html"class="hover">Location</a></li>
+                    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-2x"></i></a></li>
+                    <li><a href="Profile.html"><i class="fa-solid fa-circle-user fa-2x"></i></a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+       
+        <div class="headd">
+            <div>
+                <a href="index.html"><i class="fa-solid fa-circle-arrow-left fa-2xl" style="color:black"></i></a>
+            </div>
+        </div>
+
+        <div class="orders">
+            <div>
+                <h1> Order Summary </h1>
+                <p> Please Check your Order:</p>
+                <div class="leftie">
+                    <div class="right">
+                        <a href="strawberry.html"><img src="images/strawberry cake no bg.png"></a>
+                        <br>
+                    </div>
+                    <div>
+                        <h3> BerryBlast Basque Cheesecake</h3>
+                        <p>IDR 45.000</p>
+                        <br>
+                        <div>
+                            <div class="icons">
+                                <div><i class="fa-solid fa-trash-can"></i></div>
+                                <div></div>
+                                <div><i class="fa-solid fa-circle-minus"></i></div>
+                                <div><p>1</p></div>
+                                <div><i class="fa-solid fa-circle-plus"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout">
+               <h3> Adress</h3>
+               <p> Jl. Jelambar Kanan 3 Blok 1 no 5</p>
+               <h3> Delivered from:</h3>
+               <p>Chevre-Tangerang Pop up Store</p>
+               <h3> Order Details</h3>
+               <div class="details"> 
+                    <div><p>Berryblast </p></div>
+                    <div></div>
+                    <div><p>IDR 45.000</p></div>
+                    <div><p>Delivery Fee</p></div>
+                    <div></div>
+                    <div><p>IDR 10.000</p></div>
+                    <div><p>Tax (10%)</p></div>
+                    <div></div>
+                    <div><p>IDR 4.500</p></div>
+                    <hr><hr><hr>
+                    <div><p>Total </p></div>
+                    <div></div>
+                    <div><p>IDR 59.500</p></div>
+               </div>
+               
+            </div>
+        </div>
+
+        <footer>
+            <div class="footerContainer">
+                <img class="ftlg" src="images/chevre transparent.png">
+                <div class="socialIcons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2023-2024 Chevre All Rights Reserved</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu-list");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            menu.classList.add("active");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabledScroll");
+        }
+        cancelBtn.onclick = () => {
+            menu.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            body.classList.remove("disabledScroll");
+        }
+
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+
+</body>
+
+</html>
