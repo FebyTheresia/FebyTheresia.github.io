@@ -1,39 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="nav.js"></script>
-    <title>Multi Web-Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chevre</title>
 </head>
 <body>
     <div class="grid-container">
-        <div class="header">
-            <img src="images/Arunika.svg">
+
+        <nav class="navbar">
+            <div class="content">
+                <div>
+                    <img class="logo" src="Images/chevre transparent.png">
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <li><a href="index.html" class="hover">Home</a></li>
+                    <li><a href="menu.html" class="hover">Menu</a></li>
+                    <li><a href="location.html"class="hover">Location</a></li>
+                    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping fa-2x"></i></a></li>
+                    <li><a href="Profile.html"><i class="fa-solid fa-circle-user fa-2x"></i></a></li>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="landing" id="pale">
+            <div class="left">
+                <h1 class="title">"Savor the Aftertaste"</h1>
+                <br>
+                <p class="subheader"> Divulge in the silky sweet taste of Chevre basque burnt cheesecake
+                    <br> until the very last bite.
+                </p>
+                <br>
+                <img class="smalllogo" src="images/chevre transparent.png">
+            </div>
+
+            <div class="right">
+                <img src="Images/transparent cake big.png">
+            </div>
         </div>
 
-        <div class="topnav" id="myTopnav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About </a>
-            <a href="news.html">News</a>
-            <a href="contact.html">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
+        <div class="main">
+            <h1 > Popular Products </h1>
+            <div class="card-container">
 
-        <div class="content">
-            <h1> Welcome to Arunika Website</h1>
-            <p> Let's get Started!</p>
-            <button> Continue </button>
-        </div>
+                <div class="card">
+                    <a href="strawberry.html"><img src="images/strawberry cake no bg.png"></a>
+                    <div class="card-content">
+                        <a href="strawberry.html"><h3>Berry Blast</h3></a>
+                        <a href="strawberry.html"><p> Describe the cheesecake in a brief but enjoyable and attractive way</p></a>
+                    </div>
+                </div>
 
-        <div class="footer">
-            All works are protected by the creative commons
+                <div class="card">
+                    <a href="lemon.html"><img src="images/lemon cheesecake no bg .png"></a>
+                    <div class="card-content">
+                        <a href="lemon.html"><h3>Lemonizer</h3></a>
+                        <a href="lemon.html"><p> Describe the cheesecake in a brief but enjoyable and attractive way</p></a>
+                    </div>
+                </div>
+
+            </div>
+            <br><br><br>
+            <a href="menu.html"><button> More </button></a>
         </div>
+        <br> <br>
+        <div class="leftie">
+            <div>
+                <img class="lrg" src="Images/cake yellow bg.png">
+            </div>
+
+            <div class="right">
+                <h1 class="title">About Chevre</h1>
+                <br>
+                <p class="subheader"> Divulge in the silky sweet taste of Chevre basque burnt cheesecake
+                    <br> until the very last bite.
+                </p>
+
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footerContainer">
+                <img class="ftlg" src="images/chevre transparent.png">
+                <div class="socialIcons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy;2023-2024 Chevre All Rights Reserved</p>
+            </div>
+        </footer>
+
     </div>
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu-list");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            menu.classList.add("active");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabledScroll");
+        }
+        cancelBtn.onclick = () => {
+            menu.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            body.classList.remove("disabledScroll");
+        }
+
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+
 </body>
+
 </html>
