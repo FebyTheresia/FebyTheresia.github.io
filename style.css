@@ -139,7 +139,7 @@ body {
 
 #pale {
     background-color: #F4E9C8;
-    padding-left: 10%;
+    padding-left: 10%; 
 }
 
 .right {
@@ -148,7 +148,9 @@ body {
     margin-right: 10%;
     padding-left: 15%;
 }
-
+.right img{
+    margin-top: 10%;
+}
 .smalllogo {
     min-width: 40px;
     max-width: 120px;
@@ -803,5 +805,17 @@ span.price {
     }
     .three div{
         margin-top: 10%;
+    }
+    .twogrid{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .twogrid img {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+    }
+    button{
+        padding: 10px 50px;
     }
 }
